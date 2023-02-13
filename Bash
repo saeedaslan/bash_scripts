@@ -1,15 +1,16 @@
-#! usr/bin/bash
+#!usr/bin/bash
 
 source="/tmp/copy.sh"
- target="/tmp/copy.sh.dest"
- if  $# -lt 1  ; then
- echo "Usage: $0 source destination"
+target="/tmp/copy.sh.dest"
+
+if  $# -lt 1  ; then
+     echo "Usage: $0 source destination"
  exit 1
- fi
+fi
  cwd="$1" while read file do
- if  "$file" == "$target"  ; then 
-mv -v "$file" "$target"
- fi done
- if  -d "$target"  ; then
- rm -rf "$target"
- fi
+if  "$file" == "$target"  ; then 
+     mv -v "$file" "$target"
+fi done
+if  -d "$target"  ; then
+    rm -rf "$target"
+fi
