@@ -1,0 +1,10 @@
+#!/bin/bash
+echo "Enter directori name"
+read ndir
+if [ -d "$ndir" ]
+then
+echo "directory exist"
+else
+'mkdir $ndir'
+echo "Directory created"
+fi
